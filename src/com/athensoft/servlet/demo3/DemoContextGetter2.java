@@ -1,7 +1,8 @@
-package com.athensoft.servlet.demo1;
+package com.athensoft.servlet.demo3;
 
 import java.io.IOException;
-import javax.servlet.ServletConfig;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,41 +10,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DemoServlet
+ * Servlet implementation class DemoContextGetter2
  */
-@WebServlet("/demo2")
-public class DemoServlet2 extends HttpServlet {
+@WebServlet("/contextgetter2")
+public class DemoContextGetter2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+       
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
-    public DemoServlet2() {
+    public DemoContextGetter2() {
+        super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Servlet#init(ServletConfig)
-	 */
-	public void init(ServletConfig config) throws ServletException {
-		// TODO Auto-generated method stub
-	}
-
-	/**
-	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
-	 */
-//	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
-//	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath()).append(request.getServerName()+"\n");
-//		service(request, response);
+		response.getWriter().append("Served at: ").append(request.getContextPath()).append(request.getServerName()+"\n");;
+		
+		ServletContext context = this.getServletContext();
+		String data = (String) context.getAttribute("data");
+        response.getWriter().append("data="+data);
 	}
 
 	/**
