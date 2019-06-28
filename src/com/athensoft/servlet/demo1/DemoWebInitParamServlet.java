@@ -1,4 +1,4 @@
-package com.athensoft.test;
+package com.athensoft.servlet.demo1;
 
 import java.io.IOException;
 import java.io.PrintWriter;

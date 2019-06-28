@@ -1,4 +1,4 @@
-package com.athensoft.test;
+package com.athensoft.servlet.demo1;
 
 import java.io.IOException;
 import javax.servlet.ServletConfig;
@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class DemoServlet
  */
 @WebServlet("/demo")
-public class DemoServlet extends HttpServlet {
+public class DemoServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * Default constructor. 
      */
-    public DemoServlet() {
+    public DemoServlet2() {
         // TODO Auto-generated constructor stub
     }
 

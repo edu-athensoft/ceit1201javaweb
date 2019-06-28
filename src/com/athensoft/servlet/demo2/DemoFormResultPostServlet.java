@@ -1,4 +1,4 @@
-package com.athensoft.test;
+package com.athensoft.servlet.demo2;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -10,14 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class DemoFormResultServlet
  */
-@WebServlet("/formresult")
-public class DemoFormResultServlet extends HttpServlet {
+@WebServlet("/formresultpost")
+public class DemoFormResultPostServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DemoFormResultServlet() {
+    public DemoFormResultPostServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
