@@ -27,6 +27,7 @@ public class DemoServlet extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		// TODO Auto-generated method stub
+		System.out.println("init() is called");
 	}
 
 	/**

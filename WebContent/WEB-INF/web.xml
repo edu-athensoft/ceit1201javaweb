@@ -6,4 +6,14 @@
     <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>EduCollabrateServlet2</display-name>
+    <servlet-name>EduCollabrateServlet2</servlet-name>
+    <servlet-class>com.athensedu.serlet.demo2.EduCollabrateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EduCollabrateServlet2</servlet-name>
+    <url-pattern>/EduCollab2</url-pattern>
+  </servlet-mapping>
 </web-app>

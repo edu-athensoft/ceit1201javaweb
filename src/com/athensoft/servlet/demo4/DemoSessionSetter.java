@@ -32,9 +32,9 @@ public class DemoSessionSetter extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		String data = "data-athensoft-session";
+		String data = "data-athensoft-session";//获取数据
 	       
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession();//获得session类实例，session类型是httpsession
 		session.setAttribute("data", data);
 	}
 
