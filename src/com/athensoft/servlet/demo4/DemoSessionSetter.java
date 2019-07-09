@@ -2,13 +2,15 @@ package com.athensoft.servlet.demo4;
 
 import java.io.IOException;
 
-import javax.servlet.ServletContext;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import com.athensedu.entity.demo4.User;
 
 /**
  * Servlet implementation class DemoSessionSetter
@@ -33,9 +35,24 @@ public class DemoSessionSetter extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 		String data = "data-athensoft-session";
-	       
+		
+		/*
+		String userName = (String)request.getParameter("username");
+		String password = (String)request.getParameter("password");
+		User user = new User();
+		user.setUserName(userName);
+		user.setPassword(password);
+	     //
+		session.setAttribute("user", user);
+		*/ 
 		HttpSession session = request.getSession();
 		session.setAttribute("data", data);
+				
+		
+		//forward to destination
+		RequestDispatcher rd = request.getRequestDispatcher("UserProfile.jsp");
+		rd.forward(request, response);
+		
 	}
 
 	/**
