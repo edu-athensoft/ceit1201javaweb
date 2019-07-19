@@ -1,37 +1,25 @@
-package com.athensoft.servlet.demo1;
+package com.athensedu.servlet.demo2;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
-import javax.servlet.ServletConfig;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class DemoWebInitParamServlet
+ * Servlet implementation class EduCollabrateServelt
  */
-//@WebServlet("/demowebinitparam")
-
-@WebServlet(
-		name = "WebInitParamExample", urlPatterns = {"/demowebinitparam"}
-		,initParams = {
-		@WebInitParam(name= "Site :", value="http://athensoft.com"),
-		@WebInitParam(name= "Course Code:", value= "CEIT1201 Standard Java Web"),
-		}
-	)
-
-
-public class DemoWebInitParamServlet extends HttpServlet {
+@WebServlet("/educollab")
+public class EduCollabrateServelt extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public DemoWebInitParamServlet() {
+    public EduCollabrateServelt() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,17 +30,11 @@ public class DemoWebInitParamServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println("servlet 1");
 		
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-		out.println("<h2>Init Param Servlet Example</h2>");
-		ServletConfig config= getServletConfig();
-		String pValue= config.getInitParameter("Site :");
-		out.println("Param Value : "+pValue);
-		String pValue1= config.getInitParameter("Course Code:");
-		out.println("<br>Param Value : "+pValue1);
-		out.close();
-
+		RequestDispatcher rd=request.getRequestDispatcher("educollab2");  
+        rd.forward(request, response); 
+		
 	}
 
 	/**

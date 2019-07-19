@@ -16,5 +16,4 @@
     <servlet-name>EduCollabrateServlet2</servlet-name>
     <url-pattern>/EduCollab2</url-pattern>
   </servlet-mapping>
- 
 </web-app>

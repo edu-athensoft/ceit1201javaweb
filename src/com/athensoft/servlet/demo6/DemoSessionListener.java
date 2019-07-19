@@ -24,7 +24,7 @@ public class DemoSessionListener implements HttpSessionListener, HttpSessionAttr
     public DemoSessionListener() {
         // TODO Auto-generated constructor stub
     	Date currentDate = new Date();
-    	System.out.println("Listener init at"+currentDate.toString());
+    	System.out.println("Listener init at "+currentDate.toString());
     }
 
 	/**

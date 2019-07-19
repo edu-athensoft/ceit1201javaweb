@@ -11,19 +11,19 @@ import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
 /**
- * Servlet Filter implementation class FilterDemo
+ * Servlet Filter implementation class DemoFilter
  */
 @WebFilter(dispatcherTypes = {
 				DispatcherType.REQUEST, 
 				DispatcherType.FORWARD
 		}
-					, filterName = "demofilter1", urlPatterns = { "/*" })
-public class FilterDemo implements Filter {
+					, filterName = "DemoFilter2", urlPatterns = { "/*" })
+public class DemoFilter implements Filter {
 
     /**
      * Default constructor. 
      */
-    public FilterDemo() {
+    public DemoFilter() {
         // TODO Auto-generated constructor stub
     }
 
@@ -39,12 +39,11 @@ public class FilterDemo implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// TODO Auto-generated method stub
-		
-		
-		System.out.println("This is demofilter1 doFileter()");
+		// place your code here
+		System.out.println("This is DemoFilter2 doFilter()");
 		// pass the request along the filter chain
 		chain.doFilter(request, response);
-		System.out.println("This is demofilter1 doFileter()");
+		System.out.println("This is DemoFilter2 doFilter()");
 	}
 
 	/**
@@ -52,8 +51,7 @@ public class FilterDemo implements Filter {
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
 		// TODO Auto-generated method stub
-		System.out.println("This is demofilter1");
+		System.out.println("This is DemoFilter2 init()");
 	}
-	
 
 }

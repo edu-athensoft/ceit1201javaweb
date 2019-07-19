@@ -10,6 +10,9 @@
 <h1>Show data</h1>
 ${data}
 ${user.userName}
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/dev-zq
 </body>
 </html>

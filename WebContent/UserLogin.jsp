@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<<<<<<< HEAD
 <title>Welcome Page</title>
 </head>
 <body>
@@ -11,5 +12,12 @@
 <a href="/ceit1201javaweb/sessionsetter1">Click to Login</a>
 
 
+=======
+<title>Welcome membership page</title>
+</head>
+<body>
+<h1>Please Login</h1>
+<a href="/ceit1201javaweb/sessionsetter">Click to Login</a>
+>>>>>>> refs/remotes/origin/dev-zq
 </body>
 </html>
